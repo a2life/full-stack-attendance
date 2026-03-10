@@ -1,0 +1,335 @@
+.manage-members {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mm-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    gap: 1rem;
+}
+
+.mm-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+}
+
+.mm-subtitle {
+    color: var(--ink-light);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.btn-add {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(196, 96, 42, 0.2);
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background: var(--accent-light);
+}
+
+.error-banner {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.success-banner {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    color: #166534;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+}
+
+/* Add / Edit form */
+.member-form-card {
+    background: var(--white);
+    border: 1.5px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 140px;
+}
+
+.form-field--grow {
+    flex: 1;
+}
+
+.field-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+}
+
+.field-input {
+    border: 1.5px solid var(--border);
+    border-radius: 7px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--parchment);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.field-input:focus {
+    border-color: var(--accent);
+    background: var(--white);
+}
+
+.form-error {
+    margin-bottom: 0.75rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 1.5px solid var(--border-dark);
+    color: var(--ink-light);
+    padding: 0.55rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+}
+
+.btn-save {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.55rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(196, 96, 42, 0.25);
+    cursor: pointer;
+}
+
+.btn-save:hover:not(:disabled) {
+    background: var(--accent-light);
+}
+
+.btn-save:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Members table */
+.members-table-wrap {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.members-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.members-table thead {
+    background: var(--parchment-dark);
+    border-bottom: 1.5px solid var(--border);
+}
+
+.members-table th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+    font-weight: 600;
+    text-align: left;
+}
+
+.members-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.members-table tr:last-child td {
+    border-bottom: none;
+}
+
+.members-table tr:hover {
+    background: var(--parchment);
+}
+
+.members-table tr.row-editing {
+    background: var(--accent-pale);
+}
+
+.col-id {
+    width: 110px;
+}
+
+.col-name {
+    color: var(--ink);
+}
+
+.col-actions {
+    width: 160px;
+    text-align: right;
+}
+
+.member-id {
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    background: var(--parchment-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.btn-edit {
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--ink-light);
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 0.4rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-edit:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-pale);
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-delete:hover:not(:disabled) {
+    color: #ef4444;
+    background: #fee2e2;
+}
+
+.btn-edit:disabled,
+.btn-delete:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-footer {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    border-top: 1px solid var(--border);
+    background: var(--parchment);
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--ink-light);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Loading */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    color: var(--ink-light);
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

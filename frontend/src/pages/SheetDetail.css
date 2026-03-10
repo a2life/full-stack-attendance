@@ -1,0 +1,197 @@
+.sheet-detail {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-nav {
+    margin-bottom: 1.25rem;
+}
+
+.back-link {
+    font-size: 0.875rem;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.detail-header {
+    margin-bottom: 1.75rem;
+}
+
+.detail-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+}
+
+.detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.date-chip {
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    background: var(--accent-pale);
+    color: var(--accent);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.time-chip {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+}
+
+.detail-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.stat-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.stat-val {
+    display: block;
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+}
+
+.stat-lbl {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+    font-weight: 600;
+}
+
+.stat-present .stat-val {
+    color: var(--success);
+}
+.stat-absent .stat-val {
+    color: #dc2626;
+}
+.stat-rate .stat-val {
+    color: var(--accent);
+}
+
+.detail-table-wrap {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-table thead {
+    background: var(--parchment-dark);
+    border-bottom: 1.5px solid var(--border);
+}
+
+.detail-table th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+    font-weight: 600;
+    text-align: left;
+}
+
+.detail-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.detail-table tr:last-child td {
+    border-bottom: none;
+}
+
+.row-present {
+    background: #f0fdf4;
+}
+.row-absent {
+    background: var(--white);
+}
+
+.member-id {
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    background: var(--parchment-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-present {
+    background: var(--success-bg);
+    color: var(--success);
+}
+.badge-absent {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.remark-cell {
+    color: var(--ink);
+    font-size: 0.875rem;
+}
+.no-remark {
+    color: #ccc;
+}
+
+.loading-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    color: var(--ink-light);
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

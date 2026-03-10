@@ -1,0 +1,261 @@
+.past-sheets {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.past-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.past-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+}
+
+.past-subtitle {
+    color: var(--ink-light);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.btn-new {
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(196, 96, 42, 0.2);
+    transition: all 0.15s;
+}
+
+.btn-new:hover {
+    background: var(--accent-light);
+}
+
+.error-banner {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--ink-light);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-primary-sm {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sheets-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.sheet-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition:
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.sheet-card:hover {
+    box-shadow: var(--shadow);
+    border-color: var(--border-dark);
+}
+
+.sheet-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.sheet-card-name {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+}
+
+.sheet-card-date {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.date-chip {
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    background: var(--accent-pale);
+    color: var(--accent);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.time-chip {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+}
+
+.sheet-card-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+
+.stat-ring {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--accent) calc(var(--pct) * 1%),
+        var(--parchment-dark) 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.stat-ring::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    background: var(--white);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.stat-num {
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink);
+    position: relative;
+    z-index: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    white-space: nowrap;
+}
+
+.attendance-bar {
+    height: 4px;
+    background: var(--parchment-dark);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.sheet-card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-view {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.btn-view:hover {
+    opacity: 0.75;
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    transition: all 0.15s;
+}
+
+.btn-delete:hover {
+    color: #ef4444;
+    background: #fee2e2;
+}
+
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    color: var(--ink-light);
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
