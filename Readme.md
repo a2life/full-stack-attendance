@@ -30,6 +30,7 @@ docker compose up --build
 Wait ~30 seconds for all services to initialize, then open:
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:5000/api
+- **Mongo Express remove for production** (DB UI): http://localhost:8081
 - **MongoDB**: localhost:27017
 
 ### Stop
